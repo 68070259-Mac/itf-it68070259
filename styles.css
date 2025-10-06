@@ -1,15 +1,146 @@
-nav {
-    background-color: darkslateblue;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header (ส่วนบนสุด) */
+header {
+    background-color: #337ab7; /* สีน้ำเงินเข้ม */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #286090;
+    font-weight: bold;
+}
+
+.header-center {
+    font-size: 1.5em;
+}
+
+/* Introduction/Banner */
+.intro {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.intro h1 {
+    color: #337ab7;
+    display: inline;
+    margin-left: 10px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+#current-info {
+    background-color: #eee;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่เมื่อหน้าจอเล็ก */
+    gap: 40px;
+}
+
+.section {
+    flex: 1 1 45%; /* ให้แต่ละส่วนกินพื้นที่ประมาณ 45% */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Info Group (ไอคอน + ข้อมูล) */
+.info-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.info-group:last-child {
+    border-bottom: none;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    /* ในชีวิตจริงควรใช้ไอคอน Font Awesome หรือ SVG แทนรูปภาพ */
+}
+
+.text-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.text-info input[type="text"], 
+.text-info input[type="number"], 
+.text-info select {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 150px;
+}
+
+.text-info label {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #5cb85c; /* สีเขียว */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Currency Converter Specific */
+#convert-btn {
+    background-color: #f0ad4e; /* สีส้ม */
+}
+
+#convert-btn:hover {
+    background-color: #ec971f;
+}
+
+/* Media Query สำหรับหน้าจอเล็ก */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .section {
+        flex: 1 1 100%;
+    }
 }
