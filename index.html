@@ -1,28 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITF Simple Bank</title>
+    <link rel="stylesheet" href="style.css"> </head>
 <body>
-     <nav>
-        <p>68070259</p>
-        <h2>ITF Website</h2>
-        <p>Week 14</p>
-     </nav>
-     <div class=""container>
-        <h2 id="my=title">ITF Simple Bank</h2>
-         <img src="Cool.png" width="96" alt="Cool" />
-         <hr>
-         <div>
-            <label for="my_input">Enter any number:</label>
-            <input type="number" id="my_input" value="1">
-            <button type="button" onclick="add()">+1</button>
-            <button type="button" onclick="add()">-1</button>
-         </div>
-     </div>
-     <script src="script.js"></script>
-</body>
+    <header>
+        <div class="header-left">67070057</div>
+        <div class="header-center">ITF Website</div>
+        <div class="header-right">Week 14</div>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <img src="smiley-face.png" alt="Smiley" class="logo-img"> <h1>ITF Simple Bank</h1>
+            <p>Welcome to my first HTML + CSS + JS website!</p>
+            <div id="current-info">
+                1, Current account balance: <span id="current-account-display">1000</span>, Current cash balance: <span id="current-cash-display">1000</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="section account-overview">
+                <h2>Account Overview</h2>
+                
+                <div class="info-group">
+                    <img src="user-icon.png" alt="User" class="icon"> <div class="text-info">
+                        <strong>Account Information</strong>
+                        <p>Name: Teepada Chuenprempree</p>
+                        <p>Type: Savings Account</p>
+                    </div>
+                </div>
+
+                <div class="info-group">
+                    <img src="briefcase-icon.png" alt="Briefcase" class="icon"> <div class="text-info">
+                        <strong>Balance Information</strong>
+                        <label for="account-balance">Current account balance:</label>
+                        <input type="text" id="account-balance" value="1000" readonly>
+                        <label for="cash-balance">Current cash balance:</label>
+                        <input type="text" id="cash-balance" value="1000" readonly>
+                        <button id="change-balance">Change</button>
+                    </div>
+                </div>
+
+                <div class="info-group">
+                    <img src="bank-icon.png" alt="Bank" class="icon"> <div class="text-info">
+                        <strong>Bank Operation</strong>
+                        <select id="operation-type">
+                            <option value="deposit">Deposit</option>
+                            <option value="withdraw">Withdraw</option>
+                        </select>
+                        <input type="number" id="operation-amount" value="1" min="1">
+                        <button id="proceed-btn">Proceed</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section financial-tools">
+                <h2>Financial Tools</h2>
+                
+                <div class="info-group">
+                    <img src="coins-icon.png" alt="Coins" class="icon"> <div class="text-info">
+                        <strong>Currency Converter</strong>
+                        <label for="input-balance">Input balance:</label>
+                        <input type="number" id="input-balance" value="0">
+                        <label for="output-balance">Output balance:</label>
+                        <input type="text" id="output-balance" value="0" readonly>
+                        
+                        <label for="input-currency">Input currency:</label>
+                        <select id="input-currency">
+                            <option value="USD">USD</option>
+                            <option value="THB" selected>THB</option>
+                        </select>
+                        
+                        <label for="output-currency">Output currency:</label>
+                        <select id="output-currency">
+                            <option value="USD" selected>USD</option>
+                            <option value="THB">THB</option>
+                        </select>
+                        
+                        <button id="convert-btn">Convert</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> </body>
 </html>
